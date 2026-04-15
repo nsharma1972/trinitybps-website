@@ -1,0 +1,127 @@
+import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About — Trinity Bridge PS',
+  description: 'Trinity Bridge PS is a consulting and technology firm helping regulated industries adopt AI with confidence.',
+}
+
+const values = [
+  {
+    title: 'Regulated-First',
+    body: 'We started in industries where "move fast and break things" is not an option. Every product and engagement is built around compliance, auditability, and responsible AI use.',
+  },
+  {
+    title: 'Outcomes Over Outputs',
+    body: "We measure success by what changes in your organization — not by reports delivered or hours billed. If the adoption doesn't stick, we haven't done our job.",
+  },
+  {
+    title: 'Honest About Limits',
+    body: "AI is not a silver bullet. We tell clients what AI can and can't do for their specific situation, and we help them avoid costly mistakes before they happen.",
+  },
+]
+
+const stats = [
+  { value: '3', label: 'Integrated products' },
+  { value: '5+', label: 'Regulated industries served' },
+  { value: '1', label: 'Clear mission' },
+]
+
+export default function About() {
+  return (
+    <>
+      {/* Hero */}
+      <section className="relative px-6 pt-24 pb-16 max-w-5xl mx-auto">
+        <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-slate-50 to-white pointer-events-none" />
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-3">About Us</p>
+        <h1 className="text-4xl md:text-5xl font-semibold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
+          We bridge the gap between AI potential and real-world results
+        </h1>
+        <p className="text-lg text-brand-muted max-w-xl leading-relaxed">
+          Trinity Bridge PS was built for organizations operating in high-stakes, regulated environments —
+          where AI adoption isn't optional, but getting it wrong isn't either.
+        </p>
+      </section>
+
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-gray-100" /></div>
+
+      {/* Mission */}
+      <section className="px-6 py-16 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3">Our Mission</p>
+          <h2 className="text-2xl font-semibold text-brand-dark mb-5 leading-snug">
+            Make AI adoption accessible, responsible, and measurable for every regulated organization
+          </h2>
+          <p className="text-brand-muted leading-relaxed mb-4">
+            AI is transforming every industry, but the organizations that need it most — healthcare providers,
+            financial institutions, legal firms, manufacturers — are also the ones who face the highest barriers
+            to adoption: compliance requirements, workforce readiness gaps, and fragmented data.
+          </p>
+          <p className="text-brand-muted leading-relaxed">
+            We built Trinity Bridge PS to address exactly that. Our three integrated offerings — AI University,
+            TDI Intel, and AI Consulting — give organizations everything they need to move forward with confidence.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-3 gap-4">
+          {stats.map(s => (
+            <div key={s.value} className="text-center border border-gray-100 rounded-xl p-6 bg-white">
+              <p className="text-3xl font-semibold text-brand-blue mb-1">{s.value}</p>
+              <p className="text-xs text-brand-muted leading-snug">{s.label}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Values */}
+      <section className="bg-brand-light px-6 py-16">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3">Our Values</p>
+          <h2 className="text-xl font-semibold text-brand-dark mb-10">How we work</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {values.map(v => (
+              <div key={v.title} className="bg-white border border-gray-100 border-t-2 border-t-brand-cyan rounded-xl p-6">
+                <h3 className="font-semibold text-brand-dark mb-2">{v.title}</h3>
+                <p className="text-sm text-brand-muted leading-relaxed">{v.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products overview */}
+      <section className="px-6 py-16 max-w-5xl mx-auto">
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3">What We Offer</p>
+        <h2 className="text-xl font-semibold text-brand-dark mb-8">Three ways to move forward</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          {[
+            { color: 'text-brand-blue', border: 'border-t-brand-blue', title: 'AI University', href: '/ai-university', body: 'Structured reskilling for your workforce — diagnostic-first, industry-specific, certification-ready.' },
+            { color: 'text-brand-green', border: 'border-t-brand-green', title: 'TDI Intel', href: '/tdi-intel', body: 'Unify your data, surface AI-powered insights, and equip every level of your organization to act on them.' },
+            { color: 'text-brand-orange', border: 'border-t-brand-orange', title: 'AI Consulting', href: '/ai-consulting', body: 'Expert guidance from strategy through go-live — with compliance, change management, and outcome measurement built in.' },
+          ].map(p => (
+            <Link key={p.title} href={p.href}
+              className={`group border border-gray-100 border-t-2 ${p.border} rounded-xl p-6 bg-white hover:shadow-md transition-all`}>
+              <h3 className={`font-semibold mb-2 ${p.color}`}>{p.title}</h3>
+              <p className="text-sm text-brand-muted leading-relaxed mb-4">{p.body}</p>
+              <span className={`text-sm font-medium ${p.color} group-hover:underline`}>Learn more →</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-brand-dark px-6 py-20">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-2xl font-semibold text-white mb-4">Ready to work together?</h2>
+          <p className="text-slate-400 mb-8 max-w-md mx-auto">
+            Tell us where you are and where you want to go. We'll help you figure out the right path.
+          </p>
+          <Link href="/contact"
+            className="inline-block bg-white text-brand-dark px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+            Book a Free Consultation
+          </Link>
+        </div>
+      </section>
+    </>
+  )
+}

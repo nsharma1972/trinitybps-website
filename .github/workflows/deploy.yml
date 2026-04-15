@@ -1,0 +1,147 @@
+name: Deploy trinitybps-website
+
+on:
+  push:
+    tags: ['v*']
+    paths-ignore:
+      - '*.md'
+      - '.claude/**'
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        type: choice
+        options:
+          - prod
+        default: prod
+
+concurrency:
+  group: deploy-trinitybps-website-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  REGISTRY: ghcr.io
+  OWNER: nsharma1972
+  HEALTH_PATH: /api/health
+
+jobs:
+  # ─── Phase 0: Compute names and image ref ───
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      app_name: ${{ steps.meta.outputs.app_name }}
+      image_ref: ${{ steps.meta.outputs.image_ref }}
+      tag: ${{ steps.meta.outputs.tag }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Generate image metadata
+        id: meta
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          TAG="${VERSION}.${{ github.run_number }}"
+          IMAGE="${{ env.REGISTRY }}/${{ env.OWNER }}/trinitybps-website-prod:${TAG}"
+          echo "image_ref=${IMAGE}" >> "$GITHUB_OUTPUT"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+          echo "app_name=trinitybps-website" >> "$GITHUB_OUTPUT"
+
+  # ─── Phase 1: Build image + provision CapRover app (parallel) ───
+
+  build:
+    needs: prepare
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          push: true
+          platforms: linux/amd64
+          tags: |
+            ${{ needs.prepare.outputs.image_ref }}
+            ${{ env.REGISTRY }}/${{ env.OWNER }}/trinitybps-website-prod:latest
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+  provision-app:
+    needs: prepare
+    runs-on: ubuntu-latest
+    concurrency:
+      group: caprover-deploy-app
+      cancel-in-progress: false
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: chmod +x .github/scripts/*.sh
+
+      - name: Write env file
+        run: |
+          printf '%s\n' \
+            'NODE_ENV=production' \
+            'PORT=3000' \
+            "RESEND_API_KEY=${{ secrets.RESEND_API_KEY }}" \
+            "CONTACT_TO_EMAIL=${{ secrets.CONTACT_TO_EMAIL }}" \
+            > /tmp/app.env
+
+      - name: Configure CapRover app
+        run: |
+          .github/scripts/configure-caprover-app.sh \
+            --app-name "${{ needs.prepare.outputs.app_name }}" \
+            --caprover-url "${{ secrets.CAPROVER_URL }}" \
+            --caprover-password "${{ secrets.CAPROVER_PASSWORD }}" \
+            --container-port 3000 \
+            --env-file /tmp/app.env
+
+  # ─── Phase 2: Deploy image and verify health ───
+
+  deploy-and-verify:
+    needs: [prepare, build, provision-app]
+    runs-on: ubuntu-latest
+    concurrency:
+      group: caprover-deploy-app
+      cancel-in-progress: false
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Make scripts executable
+        run: chmod +x .github/scripts/*.sh
+
+      - name: Deploy from GHCR
+        run: |
+          .github/scripts/deploy-from-ghcr.sh \
+            --app-name "${{ needs.prepare.outputs.app_name }}" \
+            --image-ref "${{ needs.prepare.outputs.image_ref }}" \
+            --caprover-url "${{ secrets.CAPROVER_URL }}" \
+            --caprover-password "${{ secrets.CAPROVER_PASSWORD }}" \
+            --github-token "${{ secrets.GHCR_PULL_TOKEN }}" \
+            --github-owner "${{ env.OWNER }}"
+
+      - name: Validate health
+        run: |
+          .github/scripts/validate-deployment-health.sh \
+            --app-name "${{ needs.prepare.outputs.app_name }}" \
+            --caprover-url "${{ secrets.CAPROVER_URL }}" \
+            --caprover-password "${{ secrets.CAPROVER_PASSWORD }}" \
+            --app-url "https://trinitybps.com" \
+            --health-path "${{ env.HEALTH_PATH }}"

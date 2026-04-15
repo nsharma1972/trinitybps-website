@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-brand-dark antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-block bg-brand-blue text-white px-6 py-3 rounded-lg font-medium
+           hover:bg-blue-700 transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply inline-block border border-brand-blue text-brand-blue px-6 py-3 rounded-lg font-medium
+           hover:bg-brand-blue hover:text-white transition-colors duration-200;
+  }
+
+  .section {
+    @apply px-6 py-20 max-w-5xl mx-auto;
+  }
+
+  .section-title {
+    @apply text-3xl font-semibold text-brand-dark mb-4 tracking-tight;
+  }
+
+  .section-subtitle {
+    @apply text-brand-muted text-lg leading-relaxed;
+  }
+}
