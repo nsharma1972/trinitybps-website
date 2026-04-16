@@ -53,12 +53,7 @@ export default function Footer() {
                 hello@trinitybps.com
               </a>
             </li>
-            <li>
-              <a href="tel:+16035212140" className="text-brand-muted hover:text-brand-blue transition-colors">
-                +1 (603) 521-2140
-              </a>
-            </li>
-            <li className="text-brand-muted leading-snug">4 Horizon Circle<br />Nashua, NH 03064</li>
+            <li className="text-brand-muted">Nashua, NH</li>
           </ul>
         </div>
       </div>

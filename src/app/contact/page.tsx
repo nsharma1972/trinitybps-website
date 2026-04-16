@@ -30,14 +30,8 @@ export default function Contact() {
             </a>
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-2">Phone</p>
-            <a href="tel:+16035212140" className="text-brand-blue hover:underline text-sm">
-              +1 (603) 521-2140
-            </a>
-          </div>
-          <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-2">Location</p>
-            <p className="text-sm text-brand-muted">4 Horizon Circle<br />Nashua, NH 03064</p>
+            <p className="text-sm text-brand-muted">Nashua, New Hampshire</p>
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-2">Response Time</p>
