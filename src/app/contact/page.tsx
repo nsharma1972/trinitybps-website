@@ -37,7 +37,7 @@ export default function Contact() {
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-2">Location</p>
-            <p className="text-sm text-brand-muted">Nashua, New Hampshire</p>
+            <p className="text-sm text-brand-muted">4 Horizon Circle<br />Nashua, NH 03064</p>
           </div>
           <div>
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-2">Response Time</p>

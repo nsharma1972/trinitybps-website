@@ -39,9 +39,16 @@ export default function Team() {
         <h1 className="text-4xl md:text-5xl font-semibold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
           Practitioners who've lived the problems we solve
         </h1>
-        <p className="text-lg text-brand-muted max-w-xl leading-relaxed">
+        <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-5">
           We bring decades of hands-on experience in life sciences, technology, and AI — not just frameworks and slides.
         </p>
+        <div className="flex flex-wrap gap-2">
+          <span className="text-xs px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue font-semibold">WOSB Certified</span>
+          <span className="text-xs px-3 py-1 rounded-full bg-brand-green/10 text-brand-green font-semibold">Minority-Owned</span>
+          <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">Deloitte Alumni</span>
+          <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">Grant Thornton Alumni</span>
+          <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">FTI Consulting Alumni</span>
+        </div>
       </section>
 
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-gray-100" /></div>
@@ -74,10 +81,16 @@ export default function Team() {
                 life sciences industries.
               </p>
               <p>
+                His career includes leadership roles at firms including Deloitte, Grant Thornton, and
+                FTI Consulting — giving him firsthand experience with the standards and expectations of
+                the most sophisticated clients in the industry.
+              </p>
+              <p>
                 He founded Trinity Bridge PS with a single conviction: that the organizations most in need of
                 AI — regulated industries operating under strict compliance, quality, and safety mandates —
-                deserve purpose-built tools and experienced partners, not generic AI platforms retrofitted
-                for their use cases.
+                deserve purpose-built tools and experienced partners, not generic platforms retrofitted
+                for their use cases. Trinity Bridge PS is certified as a Women-Owned Small Business (WOSB)
+                and minority-owned enterprise.
               </p>
             </div>
           </div>

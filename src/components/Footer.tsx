@@ -7,9 +7,13 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-5 gap-10">
         <div className="col-span-1 md:col-span-2">
           <Image src="/logo.png" alt="Trinity Bridge PS" width={130} height={46} className="h-9 w-auto mb-3" />
-          <p className="text-sm text-brand-muted leading-relaxed max-w-xs mb-5">
+          <p className="text-sm text-brand-muted leading-relaxed max-w-xs mb-3">
             Bridging the gap between AI potential and real-world results — through education, data intelligence, and hands-on consulting.
           </p>
+          <div className="flex flex-wrap gap-2 mb-5">
+            <span className="text-xs px-2 py-1 rounded bg-brand-blue/10 text-brand-blue font-semibold">WOSB Certified</span>
+            <span className="text-xs px-2 py-1 rounded bg-brand-green/10 text-brand-green font-semibold">Minority-Owned</span>
+          </div>
           <div className="flex gap-4">
             <a href="https://www.linkedin.com/company/trinitybps" target="_blank" rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -55,14 +59,14 @@ export default function Footer() {
                 +1 (603) 521-2140
               </a>
             </li>
-            <li className="text-brand-muted">Nashua, NH</li>
+            <li className="text-brand-muted leading-snug">4 Horizon Circle<br />Nashua, NH 03064</li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-gray-100 max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
         <p className="text-xs text-brand-muted">© {new Date().getFullYear()} Trinity Bridge PS. All rights reserved.</p>
-        <p className="text-xs text-brand-muted">Regulated industries · AI adoption · Data intelligence</p>
+        <p className="text-xs text-brand-muted">WOSB · Minority-Owned · Regulated industries · AI adoption</p>
       </div>
     </footer>
   )

@@ -23,8 +23,8 @@ const values = [
 
 const stats = [
   { value: '29+', label: 'Years of industry experience' },
-  { value: '3', label: 'Integrated product offerings' },
-  { value: '5+', label: 'Regulated industries served' },
+  { value: '40%', label: 'Uptime improvement — MedTech client' },
+  { value: '25%', label: 'Cost reduction — life sciences client' },
 ]
 
 export default function About() {
@@ -37,10 +37,16 @@ export default function About() {
         <h1 className="text-4xl md:text-5xl font-semibold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
           We bridge the gap between AI potential and real-world results
         </h1>
-        <p className="text-lg text-brand-muted max-w-xl leading-relaxed">
+        <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-5">
           Trinity Bridge Professional Services, LLC was founded to help life sciences and regulated
           organizations adopt AI with confidence — where getting it wrong is not an option.
         </p>
+        <div className="flex flex-wrap gap-2">
+          <span className="text-xs px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue font-semibold">WOSB Certified</span>
+          <span className="text-xs px-3 py-1 rounded-full bg-brand-green/10 text-brand-green font-semibold">Minority-Owned</span>
+          <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">Life Sciences & MedTech</span>
+          <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">Federal & Commercial</span>
+        </div>
       </section>
 
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-gray-100" /></div>

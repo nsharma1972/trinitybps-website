@@ -6,11 +6,11 @@ import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 
 const links = [
+  { href: '/services', label: 'Services' },
   { href: '/ai-university', label: 'AI University' },
   { href: '/tdi-intel', label: 'TDI Intel' },
   { href: '/ai-consulting', label: 'AI Consulting' },
   { href: '/about', label: 'About' },
-  { href: '/team', label: 'Team' },
 ]
 
 export default function Navbar() {
