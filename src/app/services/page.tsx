@@ -103,10 +103,6 @@ const differentiators = [
     title: 'WOSB Certified',
     body: 'Certified as a Women-Owned Small Business (WOSB) — eligible for federal set-aside contracts and committed to diversity and inclusion.',
   },
-  {
-    title: 'Minority-Owned Business',
-    body: 'Certified as a minority-owned small business, bringing a diverse perspective and commitment to equitable outcomes for every client we serve.',
-  },
 ]
 
 const pastPerformance = [
@@ -142,9 +138,6 @@ export default function Services() {
           <span className="text-xs font-semibold uppercase tracking-widest text-brand-cyan">Services</span>
           <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue text-xs font-semibold">
             WOSB Certified
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-green/10 text-brand-green text-xs font-semibold">
-            Minority-Owned
           </span>
         </div>
         <h1 className="text-4xl md:text-5xl font-semibold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
@@ -255,7 +248,7 @@ export default function Services() {
               </div>
             </div>
             <p className="text-sm text-brand-muted mt-5">
-              Eligible for Women-Owned Small Business (WOSB) and minority-owned set-aside contracts
+              Eligible for Women-Owned Small Business (WOSB) set-aside contracts
               at the federal and state level.
             </p>
           </div>

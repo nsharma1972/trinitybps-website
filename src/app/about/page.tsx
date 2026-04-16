@@ -43,7 +43,6 @@ export default function About() {
         </p>
         <div className="flex flex-wrap gap-2">
           <span className="text-xs px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue font-semibold">WOSB Certified</span>
-          <span className="text-xs px-3 py-1 rounded-full bg-brand-green/10 text-brand-green font-semibold">Minority-Owned</span>
           <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">Life Sciences & MedTech</span>
           <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">Federal & Commercial</span>
         </div>

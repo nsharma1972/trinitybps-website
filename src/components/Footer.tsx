@@ -12,7 +12,6 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap gap-2 mb-5">
             <span className="text-xs px-2 py-1 rounded bg-brand-blue/10 text-brand-blue font-semibold">WOSB Certified</span>
-            <span className="text-xs px-2 py-1 rounded bg-brand-green/10 text-brand-green font-semibold">Minority-Owned</span>
           </div>
           <div className="flex gap-4">
             <a href="https://www.linkedin.com/company/trinitybps" target="_blank" rel="noopener noreferrer"
@@ -66,7 +65,7 @@ export default function Footer() {
 
       <div className="border-t border-gray-100 max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
         <p className="text-xs text-brand-muted">© {new Date().getFullYear()} Trinity Bridge PS. All rights reserved.</p>
-        <p className="text-xs text-brand-muted">WOSB · Minority-Owned · Regulated industries · AI adoption</p>
+        <p className="text-xs text-brand-muted">WOSB Certified · Regulated industries · AI adoption</p>
       </div>
     </footer>
   )

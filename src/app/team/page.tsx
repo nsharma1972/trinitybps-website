@@ -44,7 +44,6 @@ export default function Team() {
         </p>
         <div className="flex flex-wrap gap-2">
           <span className="text-xs px-3 py-1 rounded-full bg-brand-blue/10 text-brand-blue font-semibold">WOSB Certified</span>
-          <span className="text-xs px-3 py-1 rounded-full bg-brand-green/10 text-brand-green font-semibold">Minority-Owned</span>
           <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">Deloitte Alumni</span>
           <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">Grant Thornton Alumni</span>
           <span className="text-xs px-3 py-1 rounded-full bg-slate-100 text-brand-muted font-semibold">FTI Consulting Alumni</span>
@@ -90,7 +89,7 @@ export default function Team() {
                 AI — regulated industries operating under strict compliance, quality, and safety mandates —
                 deserve purpose-built tools and experienced partners, not generic platforms retrofitted
                 for their use cases. Trinity Bridge PS is certified as a Women-Owned Small Business (WOSB)
-                and minority-owned enterprise.
+                and certified Women-Owned Small Business (WOSB).
               </p>
             </div>
           </div>
