@@ -4,7 +4,7 @@ import Image from 'next/image'
 export default function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-white">
-      <div className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div className="max-w-5xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-5 gap-10">
         <div className="col-span-1 md:col-span-2">
           <Image src="/logo.png" alt="Trinity Bridge PS" width={130} height={46} className="h-9 w-auto mb-3" />
           <p className="text-sm text-brand-muted leading-relaxed max-w-xs mb-5">
@@ -27,6 +27,15 @@ export default function Footer() {
             <li><Link href="/ai-university" className="text-brand-muted hover:text-brand-blue transition-colors">AI University</Link></li>
             <li><Link href="/tdi-intel" className="text-brand-muted hover:text-brand-blue transition-colors">TDI Intel</Link></li>
             <li><Link href="/ai-consulting" className="text-brand-muted hover:text-brand-blue transition-colors">AI Consulting</Link></li>
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3">Services</p>
+          <ul className="space-y-2 text-sm">
+            <li><Link href="/digital-enablement" className="text-brand-muted hover:text-brand-blue transition-colors">Digital Enablement</Link></li>
+            <li><Link href="/cybersecurity" className="text-brand-muted hover:text-brand-blue transition-colors">Cybersecurity</Link></li>
+            <li><Link href="/life-science-assessment" className="text-brand-muted hover:text-brand-blue transition-colors">Life Science Assessment</Link></li>
           </ul>
         </div>
 
