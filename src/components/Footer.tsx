@@ -34,12 +34,19 @@ export default function Footer() {
           <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3">Company</p>
           <ul className="space-y-2 text-sm">
             <li><Link href="/about" className="text-brand-muted hover:text-brand-blue transition-colors">About</Link></li>
+            <li><Link href="/team" className="text-brand-muted hover:text-brand-blue transition-colors">Our Team</Link></li>
             <li><Link href="/contact" className="text-brand-muted hover:text-brand-blue transition-colors">Contact Us</Link></li>
             <li>
               <a href="mailto:hello@trinitybps.com" className="text-brand-muted hover:text-brand-blue transition-colors">
                 hello@trinitybps.com
               </a>
             </li>
+            <li>
+              <a href="tel:+16035212140" className="text-brand-muted hover:text-brand-blue transition-colors">
+                +1 (603) 521-2140
+              </a>
+            </li>
+            <li className="text-brand-muted">Nashua, NH</li>
           </ul>
         </div>
       </div>

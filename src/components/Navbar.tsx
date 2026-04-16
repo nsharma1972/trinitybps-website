@@ -10,6 +10,7 @@ const links = [
   { href: '/tdi-intel', label: 'TDI Intel' },
   { href: '/ai-consulting', label: 'AI Consulting' },
   { href: '/about', label: 'About' },
+  { href: '/team', label: 'Team' },
 ]
 
 export default function Navbar() {

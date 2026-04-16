@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'About — Trinity Bridge PS',
-  description: 'Trinity Bridge PS is a consulting and technology firm helping regulated industries adopt AI with confidence.',
+  description: 'Trinity Bridge Professional Services, LLC helps life sciences and regulated industries adopt AI with education, data intelligence, and hands-on consulting.',
 }
 
 const values = [
@@ -22,9 +22,9 @@ const values = [
 ]
 
 const stats = [
-  { value: '3', label: 'Integrated products' },
+  { value: '29+', label: 'Years of industry experience' },
+  { value: '3', label: 'Integrated product offerings' },
   { value: '5+', label: 'Regulated industries served' },
-  { value: '1', label: 'Clear mission' },
 ]
 
 export default function About() {
@@ -38,8 +38,8 @@ export default function About() {
           We bridge the gap between AI potential and real-world results
         </h1>
         <p className="text-lg text-brand-muted max-w-xl leading-relaxed">
-          Trinity Bridge PS was built for organizations operating in high-stakes, regulated environments —
-          where AI adoption isn't optional, but getting it wrong isn't either.
+          Trinity Bridge Professional Services, LLC was founded to help life sciences and regulated
+          organizations adopt AI with confidence — where getting it wrong is not an option.
         </p>
       </section>
 
@@ -53,13 +53,15 @@ export default function About() {
             Make AI adoption accessible, responsible, and measurable for every regulated organization
           </h2>
           <p className="text-brand-muted leading-relaxed mb-4">
-            AI is transforming every industry, but the organizations that need it most — healthcare providers,
-            financial institutions, legal firms, manufacturers — are also the ones who face the highest barriers
-            to adoption: compliance requirements, workforce readiness gaps, and fragmented data.
+            Life sciences companies — pharma, biotech, medical device, and healthcare — operate under the strictest
+            compliance and quality mandates in any industry. Yet AI has the potential to transform clinical
+            development, regulatory affairs, quality assurance, and commercial operations in ways that genuinely
+            save lives and reduce costs.
           </p>
           <p className="text-brand-muted leading-relaxed">
-            We built Trinity Bridge PS to address exactly that. Our three integrated offerings — AI University,
-            TDI Intel, and AI Consulting — give organizations everything they need to move forward with confidence.
+            Trinity Bridge PS was built to close that gap. Founded by a practitioner with 29 years of experience
+            in the industry, we bring purpose-built tools and real-world expertise — not generic AI platforms
+            retrofitted for regulated use cases.
           </p>
         </div>
 
@@ -106,6 +108,24 @@ export default function About() {
               <span className={`text-sm font-medium ${p.color} group-hover:underline`}>Learn more →</span>
             </Link>
           ))}
+        </div>
+      </section>
+
+      {/* Team callout */}
+      <section className="px-6 py-16 max-w-5xl mx-auto">
+        <div className="border border-gray-100 border-t-2 border-t-brand-cyan rounded-xl p-8 bg-white flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-2">Leadership</p>
+            <h3 className="text-lg font-semibold text-brand-dark mb-2">Meet the people behind the work</h3>
+            <p className="text-sm text-brand-muted max-w-md">
+              Narendra Sharma founded Trinity Bridge PS after 29 years in life sciences and enterprise technology.
+              Learn about our leadership team and advisory board.
+            </p>
+          </div>
+          <Link href="/team"
+            className="shrink-0 inline-block border border-brand-cyan text-brand-cyan px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-brand-cyan hover:text-white transition-colors">
+            Meet Our Team
+          </Link>
         </div>
       </section>
 
