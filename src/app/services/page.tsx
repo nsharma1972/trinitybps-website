@@ -229,7 +229,7 @@ export default function Services() {
           <div className="border border-gray-100 border-t-2 border-t-brand-blue rounded-xl p-8 bg-white">
             <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3">Government Contracting</p>
             <h2 className="text-lg font-semibold text-brand-dark mb-5">Registered & eligible for federal set-aside contracts</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 text-sm">
               <div>
                 <p className="text-xs text-brand-muted mb-1 uppercase tracking-wide font-semibold">UEI</p>
                 <p className="font-mono text-brand-dark">UX6KC1L6ZMT3</p>
@@ -241,10 +241,6 @@ export default function Services() {
               <div>
                 <p className="text-xs text-brand-muted mb-1 uppercase tracking-wide font-semibold">Certification</p>
                 <p className="text-brand-dark">WOSB</p>
-              </div>
-              <div>
-                <p className="text-xs text-brand-muted mb-1 uppercase tracking-wide font-semibold">Primary NAICS</p>
-                <p className="text-brand-dark text-xs leading-relaxed">541512, 325412, 325414, 541330, 541511, 541611</p>
               </div>
             </div>
             <p className="text-sm text-brand-muted mt-5">
