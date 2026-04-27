@@ -10,6 +10,7 @@ const links = [
   { href: '/ai-university', label: 'AI University' },
   { href: '/tdi-intel', label: 'TDI Intel' },
   { href: '/ai-consulting', label: 'AI Consulting' },
+  { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ]
 
@@ -41,6 +42,12 @@ export default function Navbar() {
           <Link href="/contact" className="btn-primary text-sm py-2 px-5">
             Book a Call
           </Link>
+          <a
+            href="https://leads.trinitybps.com"
+            className="text-xs text-brand-muted hover:text-brand-blue transition-colors border border-gray-200 rounded-full py-1.5 px-3"
+          >
+            Team Login
+          </a>
         </nav>
 
         {/* Mobile toggle */}
@@ -63,6 +70,12 @@ export default function Navbar() {
           <Link href="/contact" onClick={() => setOpen(false)} className="btn-primary text-sm text-center">
             Book a Call
           </Link>
+          <a
+            href="https://leads.trinitybps.com"
+            className="text-xs text-brand-muted hover:text-brand-blue transition-colors text-center"
+          >
+            Team Login →
+          </a>
         </div>
       )}
     </header>
