@@ -71,14 +71,14 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative px-6 py-36 max-w-5xl mx-auto text-center">
+      <section className="relative px-6 py-36 max-w-6xl mx-auto text-center">
         <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-gradient-to-br from-blue-50/70 via-white to-cyan-50/40 pointer-events-none" />
         <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,0.07),transparent_60%)] pointer-events-none" />
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-5">
           AI Adoption · Education · Intelligence · Visibility
         </p>
-        <h1 className="text-4xl md:text-6xl font-bold text-brand-dark leading-[1.1] tracking-tight mb-7">
-          <span className="text-brand-cyan">Bridging</span> Intelligence,<br className="hidden md:block" /> Transformation &amp; Growth
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark leading-[1.15] tracking-tight mb-7">
+          <span className="text-brand-cyan">Bridging</span> Intelligence, Transformation &amp; Growth
         </h1>
         <p className="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto leading-relaxed mb-10">
           Trinity Bridge PS helps organizations in regulated industries adopt AI with confidence —
