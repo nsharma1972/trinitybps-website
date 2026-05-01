@@ -81,7 +81,7 @@ const servicePages = [
     border: 'border-t-brand-orange',
   },
   {
-    title: 'Trinity Yasha',
+    title: 'Trinity Yasha (GEO + SEO)',
     body: 'GEO + SEO promotion platform. Measure your brand in ChatGPT, Claude, and Google — then auto-draft and publish the content that promotes you into the gaps.',
     href: '/yasha',
     color: 'text-brand-cyan',

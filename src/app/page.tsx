@@ -39,8 +39,8 @@ const products = [
     borderTop: 'border-t-brand-cyan',
     dotColor: 'bg-brand-cyan',
     icon: '🔍',
-    title: 'Trinity Yasha',
-    tagline: 'Promote Your Brand — GEO + SEO',
+    title: 'Trinity Yasha (GEO + SEO)',
+    tagline: 'Promote Your Brand Across AI and Search',
     description:
       'Generative Engine Optimization (GEO) and Search Engine Optimization (SEO) in one platform. Measure how your brand appears in ChatGPT, Claude, and Google — then auto-draft and publish content that promotes you into the gaps.',
     href: '/yasha',

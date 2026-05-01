@@ -10,7 +10,7 @@ const links = [
   { href: '/ai-university', label: 'AI University' },
   { href: '/tdi-intel', label: 'TDI Intel' },
   { href: '/ai-consulting', label: 'AI Consulting' },
-  { href: '/yasha', label: 'Yasha' },
+  { href: '/yasha', label: 'Yasha (GEO + SEO)' },
   { href: '/blog', label: 'Blog' },
   { href: '/about', label: 'About' },
 ]
