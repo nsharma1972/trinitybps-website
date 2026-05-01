@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ChatBubble from '@/components/ChatBubble'
 
 export const metadata: Metadata = {
   title: 'Trinity Bridge PS — AI Education, Data Intelligence & Consulting',
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main className="pt-16">{children}</main>
         <Footer />
+        <ChatBubble />
       </body>
     </html>
   )
