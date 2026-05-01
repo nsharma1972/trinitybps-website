@@ -33,8 +33,8 @@ export default function Yasha() {
       <section className="relative px-6 pt-24 pb-16 max-w-5xl mx-auto">
         <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-cyan-50/60 to-white pointer-events-none" />
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-3">Trinity Yasha — GEO + SEO Promotion</p>
-        <h1 className="text-4xl md:text-5xl font-semibold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
-          Promote Your Brand Across AI <em className="text-brand-cyan not-italic">and</em> Search
+        <h1 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
+          Promote Your <span className="text-brand-cyan">Brand</span> Across AI <em className="text-brand-cyan not-italic">and</em> Search
         </h1>
         <p className="text-lg text-brand-muted max-w-2xl leading-relaxed mb-4">
           Generative Engine Optimization (GEO) and Search Engine Optimization (SEO) — together,
