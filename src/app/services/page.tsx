@@ -147,7 +147,7 @@ export default function Services() {
             WOSB Certified
           </span>
         </div>
-        <h1 className="text-4xl md:text-5xl font-semibold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight mb-5 max-w-4xl">
           Regulatory Compliance, Digital Transformation & Cybersecurity
         </h1>
         <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-8">
