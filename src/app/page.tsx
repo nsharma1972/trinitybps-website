@@ -71,17 +71,18 @@ export default function Home() {
   return (
     <>
       {/* Hero */}
-      <section className="relative px-6 py-32 max-w-5xl mx-auto text-center">
-        <div className="absolute inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-slate-50 to-white pointer-events-none" />
-        <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-4">
-          AI Adoption · Education · Intelligence
+      <section className="relative px-6 py-36 max-w-5xl mx-auto text-center">
+        <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-gradient-to-br from-blue-50/70 via-white to-cyan-50/40 pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,0.07),transparent_60%)] pointer-events-none" />
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-5">
+          AI Adoption · Education · Intelligence · Visibility
         </p>
-        <h1 className="text-4xl md:text-6xl font-semibold text-brand-dark leading-tight tracking-tight mb-6">
+        <h1 className="text-4xl md:text-6xl font-bold text-brand-dark leading-[1.1] tracking-tight mb-7">
           Bridging Intelligence,<br className="hidden md:block" /> Transformation &amp; Growth
         </h1>
-        <p className="text-lg text-brand-muted max-w-2xl mx-auto leading-relaxed mb-10">
+        <p className="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto leading-relaxed mb-10">
           Trinity Bridge PS helps organizations in regulated industries adopt AI with confidence —
-          through workforce development, data intelligence, and strategic consulting.
+          through workforce development, data intelligence, strategic consulting, and AI/search visibility.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link href="/contact" className="btn-primary">Book a Free Consultation</Link>
@@ -90,9 +91,10 @@ export default function Home() {
       </section>
 
       {/* Solutions */}
-      <section id="solutions" className="px-6 pb-24 max-w-5xl mx-auto">
-        <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-8 text-center">Our Solutions</p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section id="solutions" className="px-6 pb-28 max-w-6xl mx-auto">
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3 text-center">Our Solutions</p>
+        <h2 className="text-2xl md:text-3xl font-bold text-brand-dark text-center mb-12 tracking-tight">Four products. One mission.</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {products.map((p) => (
             <Link key={p.title} href={p.href}
               className={`group border border-gray-100 border-t-2 ${p.borderTop} rounded-xl p-7 hover:shadow-md transition-all duration-200 flex flex-col bg-white`}>
