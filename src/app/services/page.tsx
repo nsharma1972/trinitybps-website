@@ -82,7 +82,7 @@ const servicePages = [
   },
   {
     title: 'Trinity Yasha',
-    body: 'AI visibility and SEO measurement, content generation, and publishing — be found across ChatGPT, Claude, and Google.',
+    body: 'GEO + SEO promotion platform. Measure your brand in ChatGPT, Claude, and Google — then auto-draft and publish the content that promotes you into the gaps.',
     href: '/yasha',
     color: 'text-brand-cyan',
     border: 'border-t-brand-cyan',

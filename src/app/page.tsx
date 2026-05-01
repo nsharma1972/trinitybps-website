@@ -40,9 +40,9 @@ const products = [
     dotColor: 'bg-brand-cyan',
     icon: '🔍',
     title: 'Trinity Yasha',
-    tagline: 'Be Found by AI and Search',
+    tagline: 'Promote Your Brand — GEO + SEO',
     description:
-      'Measure how your brand appears in ChatGPT, Claude, and Google. Auto-generate content that closes the gap. AI visibility and SEO in one platform.',
+      'Generative Engine Optimization (GEO) and Search Engine Optimization (SEO) in one platform. Measure how your brand appears in ChatGPT, Claude, and Google — then auto-draft and publish content that promotes you into the gaps.',
     href: '/yasha',
   },
 ]

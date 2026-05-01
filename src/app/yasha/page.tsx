@@ -2,27 +2,27 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Trinity Yasha — Be Found by AI and Search',
+  title: 'Trinity Yasha — GEO + SEO Promotion Platform',
   description:
-    'Measure how your brand appears in ChatGPT, Claude, and Google. Auto-generate optimized content that closes the gap. AI visibility and SEO in one platform.',
+    'Generative Engine Optimization (GEO) + Search Engine Optimization (SEO) in one platform. Measure how your brand appears in ChatGPT, Claude, and Google — then auto-generate and publish content that promotes you across both surfaces.',
 }
 
 const features = [
   {
-    title: 'AI Visibility Measurement',
-    body: 'Track how often — and where — your brand is mentioned in answers from ChatGPT, Claude, Perplexity, and Gemini. Share of voice, mention rate, and average rank, refreshed weekly.',
+    title: 'GEO — Generative Engine Optimization',
+    body: 'Track how often, where, and at what rank your brand is mentioned in answers from ChatGPT, Claude, Perplexity, and Gemini. Share of voice, mention rate, citation count — refreshed weekly. The newer half of being found.',
   },
   {
-    title: 'Search Visibility (SEO)',
-    body: 'Google rank position, AI Overview presence, Featured Snippet appearance, and People Also Ask coverage — every paid plan includes SERP measurement on every cycle.',
+    title: 'SEO — Search Engine Optimization',
+    body: 'Google rank position, AI Overview presence, Featured Snippet, People Also Ask, video carousel — every paid plan includes full SERP measurement on every cycle. Same dashboard, same brand, same week.',
   },
   {
-    title: 'AI-Optimized Content Drafts',
-    body: 'For each query where you should appear but don\'t, Yasha drafts a piece designed for AI Overview inclusion. Built on real measurement data from your own brand.',
+    title: 'Promotion — AI-Drafted Content',
+    body: 'For every query where AI Overview appears but your brand doesn\'t, or where you rank below page one, Yasha drafts the content needed to close the gap. Drafts use your real measurement data as context, so the copy is grounded, not generic.',
   },
   {
-    title: 'One-Click Publish',
-    body: 'Webhook delivery to your CMS, blog, or social distribution. Stage 5 closes the loop — measure the gap, generate the fix, ship it, re-measure.',
+    title: 'Promotion — One-Click Publish',
+    body: 'Webhook delivery to your CMS, blog, LinkedIn, or syndication partner. The system tracks delivery, captures the response, and the next weekly cycle measures whether the gap closed. The promotion loop runs continuously.',
   },
 ]
 
@@ -32,14 +32,18 @@ export default function Yasha() {
       {/* Hero */}
       <section className="relative px-6 pt-24 pb-16 max-w-5xl mx-auto">
         <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-cyan-50/60 to-white pointer-events-none" />
-        <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-3">Trinity Yasha</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-3">Trinity Yasha — GEO + SEO Promotion</p>
         <h1 className="text-4xl md:text-5xl font-semibold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
-          Be Found by AI and Search
+          Promote Your Brand Across AI <em className="text-brand-cyan not-italic">and</em> Search
         </h1>
-        <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-8">
-          Your buyers are asking ChatGPT, Claude, and Gemini before they ask Google.
-          Yasha measures how your brand appears across both surfaces — then drafts and
-          publishes the content that closes the gap.
+        <p className="text-lg text-brand-muted max-w-2xl leading-relaxed mb-4">
+          Generative Engine Optimization (GEO) and Search Engine Optimization (SEO) — together,
+          in one platform. Yasha measures how your brand shows up in ChatGPT, Claude, Gemini,
+          and Google, then drafts and publishes the content that promotes you into the gaps.
+        </p>
+        <p className="text-sm text-brand-muted max-w-xl leading-relaxed mb-8">
+          Your buyers are asking AI before they ask Google. If you're absent from AI answers,
+          you're invisible — even when you rank well on the search side. GEO closes that gap.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="/contact" className="btn-primary">Request a Demo</Link>
@@ -51,7 +55,11 @@ export default function Yasha() {
 
       {/* Features */}
       <section className="px-6 py-16 max-w-5xl mx-auto">
-        <h2 className="text-xl font-semibold text-brand-dark mb-10">What Yasha Does</h2>
+        <h2 className="text-xl font-semibold text-brand-dark mb-2">What Yasha Does</h2>
+        <p className="text-sm text-brand-muted mb-10 max-w-2xl">
+          Two measurement surfaces (GEO + SEO), two promotion mechanisms (drafted content,
+          one-click publish) — one closed loop running every week.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map(f => (
             <div key={f.title} className="border border-gray-100 border-t-2 border-t-brand-cyan rounded-xl p-6 bg-white">
@@ -65,7 +73,10 @@ export default function Yasha() {
       {/* The loop, visualized */}
       <section className="bg-brand-light px-6 py-16">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-xl font-semibold text-brand-dark mb-6 text-center">The closed loop</h2>
+          <h2 className="text-xl font-semibold text-brand-dark mb-2 text-center">The promotion loop</h2>
+          <p className="text-sm text-brand-muted text-center mb-6 max-w-xl mx-auto">
+            Measure → diagnose → draft → publish → re-measure. The same loop runs against both GEO and SEO surfaces every week.
+          </p>
           <ol className="space-y-3 text-sm text-brand-muted">
             <li className="bg-white border border-gray-100 rounded-lg p-4">
               <span className="font-semibold text-brand-dark">1. Measure.</span> Every week,
