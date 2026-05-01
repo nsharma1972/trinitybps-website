@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import SubscribeButton from '@/components/SubscribeButton'
 
 export const metadata: Metadata = {
   title: 'Trinity Yasha — GEO + SEO Promotion Platform',
@@ -110,36 +111,46 @@ export default function Yasha() {
       <section className="px-6 py-16 max-w-5xl mx-auto">
         <h2 className="text-xl font-semibold text-brand-dark mb-10 text-center">Plans</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[
+          {([
             {
               name: 'Starter',
               price: '$99/mo',
               limits: ['Up to 10 brands', '50 queries per brand', '5 measurement cycles / mo', '5 content drafts / mo', '5 placements / mo', 'OpenAI + Perplexity'],
-              accent: 'brand-cyan',
+              cta: 'starter' as const,
             },
             {
               name: 'Pro',
               price: '$499/mo',
               limits: ['Up to 25 brands', '200 queries per brand', 'Up to 31 cycles / mo', '25 content drafts / mo', '25 placements / mo', 'OpenAI, Perplexity, Anthropic, Google'],
-              accent: 'brand-cyan',
               featured: true,
+              cta: 'pro' as const,
             },
             {
               name: 'Enterprise',
               price: 'Custom',
               limits: ['Unlimited brands', 'Unlimited queries', 'Unlimited cycles', 'Unlimited content', 'Unlimited placements', 'All providers + custom integrations'],
-              accent: 'brand-cyan',
+              cta: 'contact' as const,
             },
-          ].map(p => (
+          ]).map(p => (
             <div
               key={p.name}
-              className={`border rounded-xl p-6 bg-white ${p.featured ? 'border-brand-cyan border-2 shadow-md' : 'border-gray-100'}`}
+              className={`border rounded-xl p-6 bg-white flex flex-col ${p.featured ? 'border-brand-cyan border-2 shadow-md' : 'border-gray-100'}`}
             >
               <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-2">{p.name}</p>
               <p className="text-3xl font-semibold text-brand-dark mb-4">{p.price}</p>
-              <ul className="space-y-2 text-sm text-brand-muted">
+              <ul className="space-y-2 text-sm text-brand-muted flex-1">
                 {p.limits.map(l => <li key={l}>• {l}</li>)}
               </ul>
+              {p.cta === 'contact' ? (
+                <Link
+                  href="/contact"
+                  className="w-full mt-5 bg-brand-dark text-white text-sm font-semibold py-2.5 px-4 rounded-lg hover:opacity-90 transition-opacity text-center block"
+                >
+                  Contact us
+                </Link>
+              ) : (
+                <SubscribeButton plan={p.cta} />
+              )}
             </div>
           ))}
         </div>
