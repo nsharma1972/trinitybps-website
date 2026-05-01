@@ -32,7 +32,7 @@ export default function AIUniversity() {
       <section className="relative px-6 pt-24 pb-16 max-w-5xl mx-auto">
         <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-blue-50/60 to-white pointer-events-none" />
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-blue mb-3">AI University</p>
-        <h1 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
+        <h1 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight mb-5 max-w-4xl">
           Reskill Your <span className="text-brand-blue">Workforce</span> for the AI Era
         </h1>
         <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-8">
