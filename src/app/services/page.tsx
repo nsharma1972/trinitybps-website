@@ -80,6 +80,13 @@ const servicePages = [
     color: 'text-brand-orange',
     border: 'border-t-brand-orange',
   },
+  {
+    title: 'Trinity Yasha',
+    body: 'AI visibility and SEO measurement, content generation, and publishing — be found across ChatGPT, Claude, and Google.',
+    href: '/yasha',
+    color: 'text-brand-cyan',
+    border: 'border-t-brand-cyan',
+  },
 ]
 
 const differentiators = [

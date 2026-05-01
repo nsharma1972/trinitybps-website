@@ -34,6 +34,17 @@ const products = [
       'Hands-on consulting for organizations navigating AI responsibly — covering strategy, compliance, change management, and implementation.',
     href: '/ai-consulting',
   },
+  {
+    textColor: 'text-brand-cyan',
+    borderTop: 'border-t-brand-cyan',
+    dotColor: 'bg-brand-cyan',
+    icon: '🔍',
+    title: 'Trinity Yasha',
+    tagline: 'Be Found by AI and Search',
+    description:
+      'Measure how your brand appears in ChatGPT, Claude, and Google. Auto-generate content that closes the gap. AI visibility and SEO in one platform.',
+    href: '/yasha',
+  },
 ]
 
 const industries = ['Healthcare', 'Financial Services', 'Legal', 'Manufacturing', 'Government']
