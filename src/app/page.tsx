@@ -34,6 +34,17 @@ const products = [
       'Hands-on consulting for organizations navigating AI responsibly — covering strategy, compliance, change management, and implementation.',
     href: '/ai-consulting',
   },
+  {
+    textColor: 'text-brand-cyan',
+    borderTop: 'border-t-brand-cyan',
+    dotColor: 'bg-brand-cyan',
+    icon: '🔍',
+    title: 'Trinity Yasha',
+    tagline: 'Promote Your Brand — GEO + SEO',
+    description:
+      'Generative Engine Optimization (GEO) and Search Engine Optimization (SEO) in one platform. Measure how your brand appears in ChatGPT, Claude, and Google — then auto-draft and publish content that promotes you into the gaps.',
+    href: '/yasha',
+  },
 ]
 
 const industries = ['Healthcare', 'Financial Services', 'Legal', 'Manufacturing', 'Government']

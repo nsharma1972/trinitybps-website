@@ -30,6 +30,7 @@ export default function Footer() {
             <li><Link href="/ai-university" className="text-brand-muted hover:text-brand-blue transition-colors">AI University</Link></li>
             <li><Link href="/tdi-intel" className="text-brand-muted hover:text-brand-blue transition-colors">TDI Intel</Link></li>
             <li><Link href="/ai-consulting" className="text-brand-muted hover:text-brand-blue transition-colors">AI Consulting</Link></li>
+            <li><Link href="/yasha" className="text-brand-muted hover:text-brand-blue transition-colors">Trinity Yasha</Link></li>
           </ul>
         </div>
 
