@@ -148,7 +148,7 @@ export default function Services() {
           </span>
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight mb-5 max-w-4xl">
-          Regulatory Compliance, Digital Transformation & Cybersecurity
+          Regulatory Compliance,<br className="hidden md:block" /> Digital Transformation &amp; Cybersecurity
         </h1>
         <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-8">
           Trinity Bridge Professional Services, LLC delivers innovative consulting solutions

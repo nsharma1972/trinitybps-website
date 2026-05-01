@@ -35,7 +35,7 @@ export default function About() {
         <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-slate-50 to-white pointer-events-none" />
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-3">About Us</p>
         <h1 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight mb-5 max-w-4xl">
-          We bridge the gap between AI potential and real-world results
+          We bridge the gap between AI potential<br className="hidden md:block" /> and real-world results
         </h1>
         <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-5">
           Trinity Bridge Professional Services, LLC was founded to help life sciences and regulated

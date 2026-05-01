@@ -78,7 +78,7 @@ export default function Home() {
           AI Adoption · Education · Intelligence · Visibility
         </p>
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-dark leading-[1.15] tracking-tight mb-7">
-          <span className="text-brand-cyan">Bridging</span> Intelligence, Transformation &amp; Growth
+          <span className="text-brand-cyan">Bridging</span> Intelligence,<br className="hidden md:block" /> Transformation &amp; Growth
         </h1>
         <p className="text-lg md:text-xl text-brand-muted max-w-2xl mx-auto leading-relaxed mb-10">
           Trinity Bridge PS helps organizations in regulated industries adopt AI with confidence —
