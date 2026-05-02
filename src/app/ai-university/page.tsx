@@ -6,10 +6,16 @@ export const metadata: Metadata = {
   description: 'Structured AI reskilling for regulated industries. Diagnostic-first learning paths that build real capability.',
 }
 
-const features = [
+const ASSESSMENT_URL = 'https://edu.trinitybps.com/assess'
+
+type Feature = { title: string; body: string; href?: string; cta?: string }
+
+const features: Feature[] = [
   {
     title: 'Diagnostic-First',
     body: 'Every learner starts with our AI Readiness Diagnostic, which maps current skills to gaps and builds a personalized learning path.',
+    href: ASSESSMENT_URL,
+    cta: 'Take the assessment →',
   },
   {
     title: 'Industry-Specific Modules',
@@ -40,7 +46,9 @@ export default function AIUniversity() {
           real skills — not just awareness.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/contact" className="btn-primary">Get Started</Link>
+          <a href={ASSESSMENT_URL} className="btn-primary" target="_blank" rel="noopener noreferrer">
+            Take the AI Readiness Assessment
+          </a>
           <Link href="/contact" className="btn-outline">Request a Demo</Link>
         </div>
       </section>
@@ -55,6 +63,16 @@ export default function AIUniversity() {
             <div key={f.title} className="border border-gray-100 border-t-2 border-t-brand-blue rounded-xl p-6 bg-white">
               <h3 className="font-semibold text-brand-dark mb-2">{f.title}</h3>
               <p className="text-sm text-brand-muted leading-relaxed">{f.body}</p>
+              {f.href && (
+                <a
+                  href={f.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-3 inline-block text-sm font-medium text-brand-blue hover:underline"
+                >
+                  {f.cta}
+                </a>
+              )}
             </div>
           ))}
         </div>
