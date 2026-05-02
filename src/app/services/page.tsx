@@ -80,6 +80,13 @@ const servicePages = [
     color: 'text-brand-orange',
     border: 'border-t-brand-orange',
   },
+  {
+    title: 'Trinity Yasha (GEO + SEO)',
+    body: 'GEO + SEO promotion platform. Measure your brand in ChatGPT, Claude, and Google — then auto-draft and publish the content that promotes you into the gaps.',
+    href: '/yasha',
+    color: 'text-brand-cyan',
+    border: 'border-t-brand-cyan',
+  },
 ]
 
 const differentiators = [
@@ -140,8 +147,8 @@ export default function Services() {
             WOSB Certified
           </span>
         </div>
-        <h1 className="text-4xl md:text-5xl font-semibold text-brand-dark leading-tight tracking-tight mb-5 max-w-2xl">
-          Regulatory Compliance, Digital Transformation & Cybersecurity
+        <h1 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight mb-5 max-w-4xl">
+          Regulatory Compliance,<br className="hidden md:block" /> Digital Transformation &amp; Cybersecurity
         </h1>
         <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-8">
           Trinity Bridge Professional Services, LLC delivers innovative consulting solutions

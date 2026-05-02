@@ -10,13 +10,17 @@ const config: Config = {
     extend: {
       colors: {
         brand: {
-          blue:   '#2E70B8',
-          orange: '#C05020',
-          green:  '#4E7A24',
-          cyan:   '#00B4D8',
-          dark:   '#1A2B3C',
-          muted:  '#64748B',
-          light:  '#F8FAFC',
+          // 2026 refresh — deeper, more saturated values for stronger
+          // contrast and a more modern feel. Each product still maps to
+          // one color (blue=AI University, emerald=TDI Intel,
+          // orange=AI Consulting, cyan=Trinity Yasha).
+          blue:   '#2563EB',  // tailwind blue-600
+          orange: '#F97316',  // tailwind orange-500 (warmer than rust)
+          green:  '#10B981',  // tailwind emerald-500
+          cyan:   '#06B6D4',  // tailwind cyan-500 (sharper)
+          dark:   '#0F172A',  // tailwind slate-900
+          muted:  '#64748B',  // unchanged — slate-500
+          light:  '#F8FAFC',  // unchanged
         },
       },
       fontFamily: {

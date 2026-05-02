@@ -30,6 +30,7 @@ export default function Footer() {
             <li><Link href="/ai-university" className="text-brand-muted hover:text-brand-blue transition-colors">AI University</Link></li>
             <li><Link href="/tdi-intel" className="text-brand-muted hover:text-brand-blue transition-colors">TDI Intel</Link></li>
             <li><Link href="/ai-consulting" className="text-brand-muted hover:text-brand-blue transition-colors">AI Consulting</Link></li>
+            <li><Link href="/yasha" className="text-brand-muted hover:text-brand-blue transition-colors">Trinity Yasha (GEO + SEO)</Link></li>
           </ul>
         </div>
 
@@ -60,7 +61,11 @@ export default function Footer() {
 
       <div className="border-t border-gray-100 max-w-5xl mx-auto px-6 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
         <p className="text-xs text-brand-muted">© {new Date().getFullYear()} Trinity Bridge PS. All rights reserved.</p>
-        <p className="text-xs text-brand-muted">WOSB Certified · Regulated industries · AI adoption</p>
+        <div className="flex items-center gap-4 text-xs text-brand-muted">
+          <Link href="/legal/privacy" className="hover:text-brand-blue transition-colors">Privacy</Link>
+          <Link href="/legal/terms" className="hover:text-brand-blue transition-colors">Terms</Link>
+          <span>WOSB Certified</span>
+        </div>
       </div>
     </footer>
   )
