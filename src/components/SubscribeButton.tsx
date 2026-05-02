@@ -124,6 +124,16 @@ export default function SubscribeButton({ plan, apiBase = DEFAULT_API_BASE }: Pr
               <p className="text-[10px] text-brand-muted text-center pt-2">
                 Powered by Stripe · We never see your card details
               </p>
+              <p className="text-[10px] text-brand-muted text-center">
+                By continuing you agree to our{' '}
+                <a href="/legal/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-cyan">
+                  Terms
+                </a>{' '}
+                and{' '}
+                <a href="/legal/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-cyan">
+                  Privacy Policy
+                </a>.
+              </p>
             </form>
           </div>
         </div>
