@@ -105,6 +105,18 @@ const links: NavLink[] = [
       accentBg: 'bg-slate-100',
     },
   },
+  {
+    href: '/partners',
+    label: 'Partners',
+    preview: {
+      eyebrow: 'Partners',
+      title: 'QwickApps & KaaliDigital',
+      body: 'Strategic technology and delivery partners — autonomous AI engineering, multi-agent SDLC, and enterprise-scale execution behind every Trinity Bridge engagement.',
+      icon: '🤝',
+      accentText: 'text-brand-orange',
+      accentBg: 'bg-orange-50',
+    },
+  },
 ]
 
 export default function Navbar() {
