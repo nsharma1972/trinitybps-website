@@ -48,6 +48,7 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li><Link href="/about" className="text-brand-muted hover:text-brand-blue transition-colors">About</Link></li>
             <li><Link href="/team" className="text-brand-muted hover:text-brand-blue transition-colors">Our Team</Link></li>
+            <li><Link href="/partners" className="text-brand-muted hover:text-brand-blue transition-colors">Partners</Link></li>
             <li><Link href="/contact" className="text-brand-muted hover:text-brand-blue transition-colors">Contact Us</Link></li>
             <li>
               <a href="mailto:hello@trinitybps.com" className="text-brand-muted hover:text-brand-blue transition-colors">

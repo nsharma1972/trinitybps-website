@@ -29,6 +29,48 @@ const credentials = [
   'Marquis Who\'s Who in America',
 ]
 
+type TechPartner = {
+  slug: string
+  name: string
+  role: string
+  affiliation: string
+  bio: string
+  highlights: string[]
+  partnerCompany: { name: string; href: string }
+}
+
+const technologyPartners: TechPartner[] = [
+  {
+    slug: 'raajkumar-subramaniam',
+    name: 'Raajkumar Subramaniam',
+    role: 'Technology Partner',
+    affiliation: 'Founder & Agentic AI Architect, QwickApps',
+    bio: 'Raaj is Trinity Bridge’s technology partner for governed AI engineering. He brings 20+ years of production software experience from Google, Bank of America Merrill Lynch, Brightcove, and Cisco — and the last two years building autonomous multi-agent SDLC infrastructure that regulated organizations can actually deploy with confidence. He currently also serves as a Cybersecurity / AI Instructor for CDW Corporation, training U.S. federal cybersecurity teams.',
+    highlights: [
+      '20+ years in software architecture',
+      'Google · Bank of America · Brightcove · Cisco',
+      'Founder, QwickApps — autonomous SDLC platform',
+      'CDW — Cybersecurity / AI Instructor (US Federal)',
+    ],
+    partnerCompany: { name: 'QwickApps', href: '/partners#qwickapps' },
+  },
+  {
+    slug: 'narender-aeron',
+    name: 'Narender Aeron',
+    role: 'Technology Partner',
+    affiliation: 'Founder & CTO, CaseKaizen · President, KaaliDigital',
+    bio: 'Narender is Trinity Bridge’s technology partner for enterprise engineering execution. With 15+ years in engineering leadership at Procore Technologies, SS&C Eze, and Dell EMC, he brings delivery oversight and execution discipline to engagements requiring scalable, secure, compliant systems. He leads CaseKaizen — an AI-native workflow automation platform — and serves as President of KaaliDigital, Trinity Bridge’s strategic delivery partner.',
+    highlights: [
+      '15+ years in engineering leadership',
+      'Procore Technologies · SS&C Eze · Dell EMC',
+      'Founder & CTO, CaseKaizen',
+      'President, KaaliDigital',
+      'Boston University, MBA · M.S. Computer Science',
+    ],
+    partnerCompany: { name: 'KaaliDigital', href: '/partners#kaalidigital' },
+  },
+]
+
 export default function Team() {
   return (
     <>
@@ -37,7 +79,7 @@ export default function Team() {
         <div className="absolute inset-x-0 top-0 -z-10 h-64 bg-gradient-to-b from-slate-50 to-white pointer-events-none" />
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-cyan mb-3">Our Team</p>
         <h1 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight tracking-tight mb-5 max-w-4xl">
-          Practitioners who've lived the problems we solve
+          Practitioners who&apos;ve lived the problems we solve
         </h1>
         <p className="text-lg text-brand-muted max-w-xl leading-relaxed mb-5">
           We bring decades of hands-on experience in life sciences, technology, and AI — not just frameworks and slides.
@@ -76,7 +118,7 @@ export default function Team() {
               <p>
                 Narendra holds a B.Tech. from IIT Roorkee and an M.S. from Boston University. He is a
                 CMMI Lead Appraiser, a Six Sigma Black Belt, PRINCE2 and ITIL certified, and has been
-                recognized in Marquis Who's Who in America for his contributions to the technology and
+                recognized in Marquis Who&apos;s Who in America for his contributions to the technology and
                 life sciences industries.
               </p>
               <p>
@@ -88,8 +130,7 @@ export default function Team() {
                 He founded Trinity Bridge PS with a single conviction: that the organizations most in need of
                 AI — regulated industries operating under strict compliance, quality, and safety mandates —
                 deserve purpose-built tools and experienced partners, not generic platforms retrofitted
-                for their use cases. Trinity Bridge PS is certified as a Women-Owned Small Business (WOSB)
-                and certified Women-Owned Small Business (WOSB).
+                for their use cases. Trinity Bridge PS is certified as a Women-Owned Small Business (WOSB).
               </p>
             </div>
           </div>
@@ -110,6 +151,42 @@ export default function Team() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Technology Partners */}
+      <section className="px-6 py-16 max-w-5xl mx-auto">
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3">Technology Partners</p>
+        <h2 className="text-xl font-semibold text-brand-dark mb-2">The engineering counterpart to our consulting</h2>
+        <p className="text-sm text-brand-muted max-w-2xl leading-relaxed mb-10">
+          Long-standing technology partners who run production AI platforms today. When engagements need
+          building — not just advising — they&apos;re in the room.
+        </p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {technologyPartners.map(p => (
+            <div key={p.slug} id={p.slug} className="border border-gray-100 border-t-2 border-t-brand-orange rounded-xl p-6 bg-white scroll-mt-20">
+              <h3 className="text-lg font-semibold text-brand-dark mb-0.5">{p.name}</h3>
+              <p className="text-brand-orange text-xs font-medium uppercase tracking-wide mb-1">{p.role}</p>
+              <p className="text-brand-muted text-xs mb-4">{p.affiliation}</p>
+              <p className="text-sm text-brand-muted leading-relaxed mb-5">{p.bio}</p>
+
+              <p className="text-xs font-semibold uppercase tracking-widest text-brand-muted mb-3">Background</p>
+              <ul className="space-y-2 mb-5">
+                {p.highlights.map(h => (
+                  <li key={h} className="flex items-start gap-2 text-sm text-brand-muted">
+                    <span className="w-1.5 h-1.5 rounded-full bg-brand-orange mt-1.5 shrink-0" />
+                    {h}
+                  </li>
+                ))}
+              </ul>
+
+              <Link href={p.partnerCompany.href}
+                className="inline-block text-xs font-medium text-brand-orange hover:underline">
+                Visit {p.partnerCompany.name} on Partners →
+              </Link>
+            </div>
+          ))}
         </div>
       </section>
 
